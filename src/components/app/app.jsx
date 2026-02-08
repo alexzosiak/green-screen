@@ -14,9 +14,9 @@ const App = () => {
     const [play, setPlay] = useState(false);
     const body = document.querySelector('body');
 
-        const onPlay = () => {
-            setPlay(() => true)
-        }
+        // const onPlay = () => {
+        //     setPlay(() => true)
+        // }
 
 
     if (play) {
@@ -29,8 +29,8 @@ const App = () => {
     return (
         
             <div className="app">
-                    <Logo/>
-                    <Button onPlay={onPlay}/>
+                <ModeController />
+                   
             </div>
          
      
