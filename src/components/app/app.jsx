@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-
+import { BrowserRouter, Route, Routes } from 'react-router';
 import Button from '../button/button';
 import ModeController from '../mode-controller/mode-controller';
 import Hero from '../hero/hero';
 import Chromo from '../chromo/chromo';
 import Hronomer from '../hronomer/hronomer';
+import Nav from '../nav/nav';
 
 import './app.scss';
 
@@ -35,14 +36,16 @@ const App = () => {
     };
 
     return (
-        <div className="app">
+        <BrowserRouter>
+            <div className={play ? 'app' : 'app-ctatic'}>
             {play ? (
                 <Chromo setPlay={setPlay} />
             ) : (
                 <Hero onToggleFullscreen={onToggleFullscreen} />
             )}
             
-        </div>
+            </div>
+        </BrowserRouter>
     );
 };
 

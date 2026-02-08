@@ -1,7 +1,11 @@
 .app {
     position: relative;
-    margin: 0 auto;
     width: 100vw;
     height: 100vh;
 }
 
+.app-ctatic {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
