@@ -1,9 +1,11 @@
 @import '../../scss/variable.scss';
 
 .chromo {
+    position: relative;
     margin: 0 auto;
-    padding: 30px;
+    padding: 40px;
     width: 100vw;
     height: 100vh;
     background-color: $color-green;
 }
+

@@ -4,9 +4,6 @@ import './hero.scss';
 
 const Hero = ({onToggleFullscreen}) => {
 
-
-
-
     return (
         <div className="hero">
             <div className="hero__wrapper">
@@ -16,8 +13,7 @@ const Hero = ({onToggleFullscreen}) => {
             <h2 className="hero__subtitle">create your first VFX effect in your film</h2>
 
             <Button selector={'hero__button'} text={'Try start'} active={() => {
-          
-                onToggleFullscreen();}}>
+                onToggleFullscreen()}}>
             </Button>
         </div>
     );

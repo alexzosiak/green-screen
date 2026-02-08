@@ -4,6 +4,7 @@ import Button from '../button/button';
 import ModeController from '../mode-controller/mode-controller';
 import Hero from '../hero/hero';
 import Chromo from '../chromo/chromo';
+import Hronomer from '../hronomer/hronomer';
 
 import './app.scss';
 
@@ -33,18 +34,6 @@ const App = () => {
         }
     };
 
-  
-
-
-
-    // const onPlay = () => {
-    //     setPlay(() => true);
-    // };
-
-    // const end = () => {
-    //     setPlay(() => false);
-    // };
-
     return (
         <div className="app">
             {play ? (
@@ -52,6 +41,7 @@ const App = () => {
             ) : (
                 <Hero onToggleFullscreen={onToggleFullscreen} />
             )}
+            
         </div>
     );
 };
