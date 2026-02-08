@@ -1,18 +1,16 @@
 import { useState } from "react";
 
-import Plus from "../plus/plus";
+import Marker from "../marker/marker";
 import Button from "../button/button";
 import ModeController from '../mode-controller/mode-controller';
-import Logo from "../logo/logo";
+import Hero from "../hero/hero";
 
 import './app.scss';
-
-
-
 
 const App = () => {
     const [play, setPlay] = useState(false);
     const body = document.querySelector('body');
+
 
         // const onPlay = () => {
         //     setPlay(() => true)
@@ -29,7 +27,7 @@ const App = () => {
     return (
         
             <div className="app">
-                <ModeController />
+                <Hero/>
                    
             </div>
          

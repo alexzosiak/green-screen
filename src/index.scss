@@ -1,8 +1,58 @@
 @import './scss/variable.scss';
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     position: relative;
-    padding: 25px;
-    margin: 0 auto;
-    // background-color: #ffffff;
+
+}
+
+
+
+.heros {
+  background: linear-gradient(
+    135deg,
+    #0b0f1a,
+    #1a2440,
+    #3b2f1e
+  );
+  position: relative;
+}
+
+svg {
+  display: block;
+}
+
+
+.wave {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    #ff6a00,
+    #ffd500,
+    #00c3ff
+  );
+}
+
+.wave::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2), transparent 60%);
+  animation: moveWave 10s linear infinite;
+}
+
+@keyframes moveWave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
