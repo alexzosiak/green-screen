@@ -2,13 +2,14 @@ import './chromo.scss';
 import Marker from '../marker/marker';
 import Hronomer from '../hronomer/hronomer';
 
-const Chromo = () => {
-   
+const Chromo = ({timeCode}) => {
 
+    console.log(`this is page Chromo : ${timeCode}`)
+    
     return (
         <div className="chromo">
             <Marker />
-            <Hronomer /> 
+            {timeCode ? <Hronomer /> : null}
         </div>
     );
 };

@@ -12,6 +12,9 @@ import './app.scss';
 
 const App = () => {
     const [play, setPlay] = useState(false);
+    const [timeCode, setTimeCode] = useState(null);
+
+    console.log(`App - ${timeCode}`)
 
     useEffect(() => {
         const check = () => {
@@ -38,8 +41,7 @@ const App = () => {
 
     return (
             <div className={play ? 'app' : 'app-ctatic'}>
-            {play ? <Chromo setPlay={setPlay} /> : <Conecter onToggleFullscreen={onToggleFullscreen} />}
-            
+            {play ? <Chromo setPlay={setPlay} timeCode={timeCode}/> : <Conecter onToggleFullscreen={onToggleFullscreen} setTimeCode={setTimeCode}/>}
             </div>
     );
 };
