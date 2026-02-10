@@ -6,8 +6,6 @@ import SettingPage from '../pages/SettingPage';
 import Nav from "../nav/nav";
 
 const Conecter = ({onToggleFullscreen, asa, asa2, asa3, hronomer, marker, screen}) => {
-    
-
     return (
         <>  
             <BrowserRouter>

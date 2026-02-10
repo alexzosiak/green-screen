@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './setting-chromo.scss';
 
 const SettingChromo = ({asa, asa2, asa3, hronomer, marker, screen}) => {
     const [timecode, setTimecode] = useState(hronomer);
@@ -6,8 +7,8 @@ const SettingChromo = ({asa, asa2, asa3, hronomer, marker, screen}) => {
     const [screenSetting, setScreenSetting] = useState(screen);
 
     return (
-        <div>
-            <div>
+        <div className="setting">
+            <div className="setting__block">
                 <label htmlFor="time-code">Time code</label>
                 <span>Not</span>
                 <input type="range" id="time-code" min={0} max={1} value={timecode} onChange={(e) => {
@@ -17,7 +18,7 @@ const SettingChromo = ({asa, asa2, asa3, hronomer, marker, screen}) => {
                 <span>Yes</span>
             </div>
 
-             <div>
+             <div className="setting__block">
                 <label htmlFor="marker-code">Marker</label>
                 <span>Not</span>
                 <input type="range" id="marker-code" min={0} max={1} value={markerSetting} onChange={(e) => {
@@ -27,7 +28,7 @@ const SettingChromo = ({asa, asa2, asa3, hronomer, marker, screen}) => {
                 <span>Yes</span>
             </div>
 
-             <div>
+             <div className="setting__block">
                 <label htmlFor="screen-code">Screen</label>
                 <span>blue</span>
                 <input type="range" id="screen-code" min={0} max={1} value={screenSetting} onChange={(e) => {
