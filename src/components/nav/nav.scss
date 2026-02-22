@@ -1,4 +1,4 @@
-@import '../../scss/variable.scss';
+@use '../../scss/variable.scss' as *;
 
 .nav {
     display: flex;
@@ -13,16 +13,21 @@
 
 
             & > .link {
+                padding: 5px;
                 font-size: 20px;
                 font-weight: 500;
                 text-decoration: none;
                 color: black;
-                &:hover {
-                    color: $color-green;
-                }
+                
             }
         }
     }
 
 
+}
+
+.active {
+    
+   
+    background-color: rgba($color: #10bb16, $alpha: 0.5)
 }

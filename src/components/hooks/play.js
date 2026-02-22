@@ -15,7 +15,7 @@ export const usePlay = create((set) => ({
 }))
 
 export const useScreen = create((set) => ({
-    screen: false,
+    screen: 1,
     updateScreen: (newScreen) => set({ screen: newScreen })
 }))
 

@@ -4,10 +4,9 @@ import MainPage from '../pages/MainPage';
 import AboutPage from '../pages/AboutPage';
 import SettingPage from '../pages/SettingPage';
 
-
 import Nav from "../nav/nav";
 
-const Conecter = () => {
+const Rouning = () => {
 
     return (
         <>  
@@ -15,7 +14,7 @@ const Conecter = () => {
                 <Nav/>
                     <Routes>
                         <Route path='/' element={<MainPage />}></Route>
-                        <Route path='/about' element={<AboutPage/>}></Route>
+                        <Route path='/about' element={<AboutPage />}></Route>
                         <Route path='/setting' element={<SettingPage />}></Route>
                     </Routes>
             </BrowserRouter>
@@ -23,4 +22,4 @@ const Conecter = () => {
     )
 }
 
-export default Conecter;
+export default Rouning;

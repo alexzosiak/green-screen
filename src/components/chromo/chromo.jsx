@@ -5,8 +5,6 @@ import Hronomer from '../hronomer/hronomer';
 import './chromo.scss';
 
 
-
-
 const Chromo = () => {
     const { screen } = useScreen();
     const { hronomer } = useHronomer();
