@@ -1,32 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { usePlay } from '../hooks/play';
+
 import Chromo from '../chromo/chromo';
 import Conecter from '../conectr/conectr';
 
 import './app.scss';
 
 const App = () => {
-    const [play, setPlay] = useState(false);
-    const [hronomer, setHronomer] = useState(1);
-    const [marker, setMarker] = useState(1);
-    const [screen, setScreen] = useState(1);
-
-    const asa = (times) => {
-        setHronomer(times);
-        console.log(`times = ${hronomer}`);
-    };
-
-    const asa2 = (times) => {
-        setMarker(times);
-    };
-
-    const asa3 = (times) => {
-        setScreen(times);
-    };
-
+    const { play, updatePlay } = usePlay();
+ 
     useEffect(() => {
         const check = () => {
             if (!document.fullscreenElement) {
-                setPlay(false);
+                updatePlay(false);
             }
         };
         document.addEventListener('fullscreenchange', check);
@@ -36,31 +22,10 @@ const App = () => {
         };
     }, []);
 
-    const onToggleFullscreen = () => {
-        if (!document.fullscreenElement) {
-            document.documentElement
-                .requestFullscreen()
-                .then(() => setPlay(true));
-        } else {
-            document.exitFullscreen();
-        }
-    };
 
     return (
         <div className={play ? 'app' : 'app-ctatic'}>
-            {play ? (
-                <Chromo setPlay={setPlay} hronomer={hronomer} marker={marker} screen={screen}/>
-            ) : (
-                <Conecter
-                    onToggleFullscreen={onToggleFullscreen}
-                    asa={asa}
-                    asa2={asa2}
-                    asa3={asa3}
-                    hronomer={hronomer}
-                    marker={marker}
-                    screen={screen}
-                />
-            )}
+            {play ? <Chromo /> : <Conecter />}
         </div>
     );
 };

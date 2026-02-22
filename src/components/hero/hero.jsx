@@ -1,9 +1,12 @@
+import { usePlay } from '../hooks/play';
 import logo from './glasses.svg';
 import Button from '../button/button';
 
 import './hero.scss';
 
-const Hero = ({ onToggleFullscreen }) => {
+const Hero = () => {
+    const { onToggleFullscreen } = usePlay();
+    
     return (
         <div className="hero">
             <div className="hero__wrapper">

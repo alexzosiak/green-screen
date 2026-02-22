@@ -1,8 +1,17 @@
-import './chromo.scss';
+import { useScreen, useHronomer, useMarker } from '../hooks/play';
 import Marker from '../marker/marker';
 import Hronomer from '../hronomer/hronomer';
 
-const Chromo = ({hronomer, marker, screen}) => {
+import './chromo.scss';
+
+
+
+
+const Chromo = () => {
+    const { screen } = useScreen();
+    const { hronomer } = useHronomer();
+    const { marker } = useMarker();
+
     let showScreen = 'chromo ';
     showScreen += +screen ? 'green' : 'blue';
     const showHronomer = +hronomer ? <Hronomer/> : null;
