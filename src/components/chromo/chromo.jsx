@@ -1,4 +1,4 @@
-import { useScreen, useHronomer, useMarker } from '../hooks/play';
+import { useScreen, useHronomer, useMarker } from '../hooks/global-state';
 import Marker from '../marker/marker';
 import Hronomer from '../hronomer/hronomer';
 

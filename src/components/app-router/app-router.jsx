@@ -1,12 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router';
-
 import MainPage from '../pages/MainPage';
 import AboutPage from '../pages/AboutPage';
 import SettingPage from '../pages/SettingPage';
 
 import Nav from "../nav/nav";
 
-const Rouning = () => {
+const AppRouter = () => {
 
     return (
         <>  
@@ -22,4 +21,4 @@ const Rouning = () => {
     )
 }
 
-export default Rouning;
+export default AppRouter;

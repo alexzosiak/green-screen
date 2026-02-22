@@ -3,11 +3,12 @@
     margin: 0 auto;
     margin-top: 100px;
     display: flex;
-    flex-direction: column;
- 
+    justify-content: space-around;
+
+
     &__wrapper {
         display: flex;
-        gap: 20px;
+        flex-direction: column;
     }
 
     &__title {
@@ -16,11 +17,11 @@
         color: rgb(141, 219, 25);
         
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-        text-transform: uppercase;
+        text-transform: uppercase;       
     }
 
     &__logo {
-        width: 60px;
+        width: 400px;
     }
 
     &__subtitle {
@@ -31,6 +32,14 @@
     &__button {
         width: 200px;
         margin-top: 35px;
-        padding: 5px 10px;
+        padding: 10px 10px;
+        background-color: rgb(255, 255, 251);
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 3px;
+        &:hover {
+            background-color: rgb(188, 248, 170);
+            border: 1px solid rgb(255, 255, 251);
+        }
     }
 }

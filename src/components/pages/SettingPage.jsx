@@ -1,4 +1,4 @@
-import { usePlay } from '../hooks/play';
+import { usePlay } from '../hooks/global-state';
 import SettingChromo from "../setting-chromo/setting-chromo";
 import Button from "../button/button";
 

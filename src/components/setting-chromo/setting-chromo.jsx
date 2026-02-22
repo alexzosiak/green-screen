@@ -1,4 +1,4 @@
-import { useScreen, useMarker, useHronomer } from '../hooks/play';
+import { useScreen, useMarker, useHronomer } from '../hooks/global-state';
 import './setting-chromo.scss';
 
 const SettingChromo = () => {

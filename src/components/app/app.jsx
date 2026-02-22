@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import { usePlay } from '../hooks/play';
+import { usePlay } from '../hooks/global-state';
 
 import Chromo from '../chromo/chromo';
-import Conecter from '../conectr/conectr';
+import AppRouter from '../app-router/app-router';
 
 import './app.scss';
 
@@ -25,7 +25,7 @@ const App = () => {
 
     return (
         <div className={play ? 'app' : 'app-ctatic'}>
-            {play ? <Chromo /> : <Conecter />}
+            {play ? <Chromo /> : <AppRouter />}
         </div>
     );
 };

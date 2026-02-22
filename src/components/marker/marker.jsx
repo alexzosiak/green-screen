@@ -1,11 +1,6 @@
-import { useState } from 'react';
-
 import './marker.scss';
 
-const Marker = () => {
-    const [market, setMarker] = useState();
-
-    
+const Marker = () => {  
 
     return (
         <>

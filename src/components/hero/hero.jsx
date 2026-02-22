@@ -1,29 +1,28 @@
-import { usePlay } from '../hooks/play';
-import logo from './glasses.svg';
+import { usePlay } from '../hooks/global-state';
 import Button from '../button/button';
+import imac from './1.png';
 
 import './hero.scss';
 
 const Hero = () => {
     const { onToggleFullscreen } = usePlay();
-    
+   
     return (
-        <div className="hero">
+        <section className="hero">
             <div className="hero__wrapper">
                 <h1 className="hero__title">Green Screen</h1>
-                <img className="hero__logo" src={logo} alt="logo" />
+                <h2 className="hero__subtitle">create your first <b>VFX</b> effect in your film</h2>
+                <Button
+                    selector={'hero__button'}
+                    text={'Try naw'}
+                    active={() => {
+                        onToggleFullscreen();
+                    }}
+                ></Button>
             </div>
-            <h2 className="hero__subtitle">
-                create your first VFX effect in your film
-            </h2>
-            <Button
-                selector={'hero__button'}
-                text={'Try start'}
-                active={() => {
-                    onToggleFullscreen();
-                }}
-            ></Button>
-        </div>
+            <img src={imac} alt="" className='hero__logo'/>
+        </section>
+        
     );
 };
 
