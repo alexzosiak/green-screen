@@ -4,6 +4,8 @@ import imac from './1.png';
 
 import './hero.scss';
 
+
+
 const Hero = () => {
     const { onToggleFullscreen } = usePlay();
    
