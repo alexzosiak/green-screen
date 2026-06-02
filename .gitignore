@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Sass output is bundled by Vite from the source .scss files.
+src/**/*.css
+src/**/*.css.map
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

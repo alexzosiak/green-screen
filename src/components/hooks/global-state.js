@@ -4,12 +4,22 @@ export const usePlay = create((set) => ({
     play: false,
     updatePlay: (newPlay) => set({ play: newPlay }),
     onToggleFullscreen: () => {
-        if (!document.fullscreenElement) {
-            document.documentElement
-                .requestFullscreen()
-                .then(() => set({ play : true}));
+        const element = document.documentElement;
+        const fullscreenElement = document.fullscreenElement || document.webkitFullscreenElement;
+
+        if (!fullscreenElement) {
+            const requestFullscreen = element.requestFullscreen || element.webkitRequestFullscreen;
+
+            if (requestFullscreen) {
+                Promise.resolve(requestFullscreen.call(element))
+                    .then(() => set({ play: true }));
+            }
         } else {
-            document.exitFullscreen();
+            const exitFullscreen = document.exitFullscreen || document.webkitExitFullscreen;
+
+            if (exitFullscreen) {
+                exitFullscreen.call(document);
+            }
         }
     }
 }))
@@ -29,4 +39,3 @@ export const useMarker = create((set) => ({
     marker: 1,
     updateMarker: (newMarker) => set({marker: newMarker})
 }))
-

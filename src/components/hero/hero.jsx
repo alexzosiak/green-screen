@@ -1,6 +1,5 @@
 import { usePlay } from '../hooks/global-state';
 import Button from '../button/button';
-import imac from './1.png';
 
 import './hero.scss';
 
@@ -12,17 +11,21 @@ const Hero = () => {
     return (
         <section className="hero">
             <div className="hero__wrapper">
+                <span className="hero__eyebrow">Virtual production toolkit</span>
                 <h1 className="hero__title">Green Screen</h1>
-                <h2 className="hero__subtitle">create your first <b>VFX</b> effect in your film</h2>
+                <h2 className="hero__subtitle">Create your first <b>VFX</b> effect and turn your screen into a clean chroma key stage.</h2>
                 <Button
                     selector={'hero__button'}
-                    text={'Try naw'}
+                    text={'Start'}
                     active={() => {
                         onToggleFullscreen();
                     }}
                 ></Button>
             </div>
-            <img src={imac} alt="" className='hero__logo'/>
+            <div className="hero__monitor">
+                <span className="hero__monitor-label">Stage monitor</span>
+                <span className="hero__monitor-status">Ready for keying</span>
+            </div>
         </section>
         
     );

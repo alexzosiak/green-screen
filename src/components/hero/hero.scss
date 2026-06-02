@@ -1,45 +1,104 @@
-.hero {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-around;
+@use '../../scss/variable.scss' as *;
 
+.hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+    padding: 72px 44px;
+    border: 1px solid $color-border;
+    border-radius: 18px;
+    background:
+        linear-gradient(120deg, rgba($color-surface, 0.96), rgba($color-surface-soft, 0.78)),
+        repeating-linear-gradient(90deg, transparent 0 42px, rgba($color-accent, 0.03) 43px 44px);
+    box-shadow: 0 26px 80px rgba(0, 0, 0, 0.28);
 
     &__wrapper {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        max-width: 660px;
+    }
+
+    &__eyebrow {
+        margin-bottom: 16px;
+        color: $color-accent;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
     }
 
     &__title {
-        font-size:70px;
+        color: $color-main-text;
+        font-size: clamp(58px, 8vw, 108px);
         font-weight: 900;
-        color: rgb(141, 219, 25);
-        
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-        text-transform: uppercase;       
-    }
-
-    &__logo {
-        width: 400px;
+        letter-spacing: -0.08em;
+        line-height: 0.88;
+        text-shadow: 0 0 40px rgba($color-accent, 0.18);
+        text-transform: uppercase;
     }
 
     &__subtitle {
-        font-size: 24px;
+        max-width: 560px;
+        margin-top: 24px;
+        color: $color-muted-text;
+        font-size: 20px;
         font-weight: 400;
+        line-height: 1.55;
+
+        b {
+            color: $color-accent;
+        }
     }
 
     &__button {
-        width: 200px;
         margin-top: 35px;
-        padding: 10px 10px;
-        background-color: rgb(255, 255, 251);
-        cursor: pointer;
-        border: 1px solid black;
-        border-radius: 3px;
-        &:hover {
-            background-color: rgb(188, 248, 170);
-            border: 1px solid rgb(255, 255, 251);
+        min-width: 180px;
+    }
+
+    &__monitor {
+        display: flex;
+        width: min(30vw, 280px);
+        aspect-ratio: 4 / 5;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 22px;
+        border: 10px solid #080d0b;
+        border-radius: 14px;
+        background:
+            linear-gradient(rgba($color-green, 0.8), rgba($color-green, 0.86)),
+            repeating-linear-gradient(0deg, transparent 0 8px, rgba(255, 255, 255, 0.08) 9px 10px);
+        box-shadow:
+            0 0 0 1px rgba($color-accent, 0.35),
+            0 0 70px rgba($color-green, 0.2);
+    }
+
+    &__monitor-label,
+    &__monitor-status {
+        width: fit-content;
+        padding: 5px 7px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.72);
+        font-family: monospace;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    &__monitor-status {
+        margin-top: 5px;
+        color: $color-accent;
+    }
+}
+
+@media (max-width: 760px) {
+    .hero {
+        padding: 48px 26px;
+
+        &__monitor {
+            display: none;
         }
     }
 }

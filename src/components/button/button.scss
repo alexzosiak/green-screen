@@ -1,0 +1,26 @@
+@use '../../scss/variable.scss' as *;
+
+.button {
+    padding: 13px 22px;
+    border: 1px solid rgba($color-accent, 0.75);
+    border-radius: 8px;
+    color: #041108;
+    background: $color-accent;
+    box-shadow: 0 0 24px rgba($color-accent, 0.22);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: 180ms ease;
+
+    &:hover {
+        background: #69ff9d;
+        box-shadow: 0 0 34px rgba($color-accent, 0.4);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}

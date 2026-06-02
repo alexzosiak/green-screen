@@ -1,21 +1,22 @@
 import { usePlay } from '../hooks/global-state';
 import SettingChromo from "../setting-chromo/setting-chromo";
 import Button from "../button/button";
+import './SettingPage.scss';
 
 const SettingPage = () => {
     const { onToggleFullscreen} = usePlay();
 
     return (
-        <div>
+        <main className="setting-page">
             <SettingChromo />
-               <Button
-                selector={'hero__button'}
-                text={'Try start'}
+            <Button
+                selector={'setting-page__button'}
+                text={'Launch screen'}
                 active={() => {
                     onToggleFullscreen();
                 }}
             ></Button>
-        </div>
+        </main>
     )
     
 }

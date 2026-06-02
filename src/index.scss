@@ -6,13 +6,29 @@
     box-sizing: border-box;
 }
 
+html {
+    min-width: 320px;
+    background-color: $color-black;
+}
+
 body {
-    font-family: "Noto Sans", sans-serif;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: "Noto Sans", Arial, sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     color: $color-main-text;
+    background:
+        linear-gradient(115deg, rgba(5, 10, 8, 0.96), rgba(5, 10, 8, 0.8)),
+        url('./IMG_2374.PNG') top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: $color-black;
 }
 
-
-
-
+button,
+a,
+input {
+    font: inherit;
+}

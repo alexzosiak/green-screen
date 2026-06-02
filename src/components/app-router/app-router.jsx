@@ -4,20 +4,21 @@ import AboutPage from '../pages/AboutPage';
 import SettingPage from '../pages/SettingPage';
 
 import Nav from "../nav/nav";
+import './app-router.scss';
 
 const AppRouter = () => {
 
     return (
-        <>  
-            <BrowserRouter>
+        <BrowserRouter>
+            <div className="site-shell">
                 <Nav/>
-                    <Routes>
-                        <Route path='/' element={<MainPage />}></Route>
-                        <Route path='/about' element={<AboutPage />}></Route>
-                        <Route path='/setting' element={<SettingPage />}></Route>
-                    </Routes>
-            </BrowserRouter>
-        </>
+                <Routes>
+                    <Route path='/' element={<MainPage />}></Route>
+                    <Route path='/about' element={<AboutPage />}></Route>
+                    <Route path='/setting' element={<SettingPage />}></Route>
+                </Routes>
+            </div>
+        </BrowserRouter>
     )
 }
 

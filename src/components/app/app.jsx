@@ -11,16 +11,18 @@ const App = () => {
  
     useEffect(() => {
         const check = () => {
-            if (!document.fullscreenElement) {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
                 updatePlay(false);
             }
         };
         document.addEventListener('fullscreenchange', check);
+        document.addEventListener('webkitfullscreenchange', check);
 
         return () => {
             document.removeEventListener('fullscreenchange', check);
+            document.removeEventListener('webkitfullscreenchange', check);
         };
-    }, []);
+    }, [updatePlay]);
 
 
     return (
