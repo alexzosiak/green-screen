@@ -5,10 +5,20 @@ const Hronomer = () => {
     const [time, setTime] = useState(0);
 
     useEffect(() => {
-        const start = Date.now(); 
+        const STORAGE_KEY = 'chronometer_start_time';
+        
+        let startTime = localStorage.getItem(STORAGE_KEY);
+        if (!startTime) {
+            startTime = Date.now().toString();
+            localStorage.setItem(STORAGE_KEY, startTime);
+        } else {
+            startTime = parseInt(startTime);
+        }
+
         const interval = setInterval(() => {
-            setTime(Date.now() - start);
-        }, 10); 
+            const elapsed = Date.now() - parseInt(localStorage.getItem(STORAGE_KEY));
+            setTime(elapsed);
+        }, 10);
 
         return () => clearInterval(interval);
     }, []);
