@@ -5,17 +5,18 @@
     justify-content: space-between;
     align-items: center;
     gap: 28px;
-    padding: 14px 18px;
-    border: 1px solid $color-border;
-    border-radius: 14px;
-    background: rgba($color-surface, 0.82);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
-    backdrop-filter: blur(12px);
+    width: 100%;
 
     &__brand {
         display: flex;
         align-items: center;
         gap: 10px;
+        padding: 16px 18px;
+        border: 1px solid $color-border;
+        border-radius: 14px;
+        background: rgba($color-surface, 0.82);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(12px);
         color: $color-main-text;
         font-size: 15px;
         font-weight: 800;
@@ -49,6 +50,19 @@
             border-color: $color-border;
             background-color: rgba($color-accent, 0.1);
         }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-left: auto;
+        padding: 14px 18px;
+        border: 1px solid $color-border;
+        border-radius: 14px;
+        background: rgba($color-surface, 0.82);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(12px);
     }
 
     &__list {
@@ -90,9 +104,13 @@
             flex: 1;
         }
 
-        &__list {
-            order: 3;
+        &__actions {
             width: 100%;
+            justify-content: space-between;
+        }
+
+        &__list {
+            flex-wrap: wrap;
         }
 
         &__link {

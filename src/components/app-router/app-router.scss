@@ -4,3 +4,9 @@
     min-height: 100vh;
     padding: 22px 0 48px;
 }
+
+.site-shell:has(.main-page) {
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 22px;
+}

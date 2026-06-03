@@ -19,8 +19,8 @@ body {
     font-style: normal;
     color: $color-main-text;
     background:
-        linear-gradient(115deg, rgba(5, 10, 8, 0.96), rgba(5, 10, 8, 0.8)),
-        url('./IMG_2374.PNG') top center;
+        radial-gradient(circle at top left, rgba($color-accent, 0.12), transparent 34%),
+        linear-gradient(115deg, rgba(5, 10, 8, 0.98), rgba(5, 10, 8, 0.9));
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
